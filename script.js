@@ -164,12 +164,10 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 // 1. Create an array 'events' of the different game events that happened (no duplicates)
-
-// set
 const events = [...new Set(gameEvents.values())];
 console.log(events);
 
-// 2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+// 2. After the game has finished, it was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
 
 gameEvents.delete(64);
 console.log(gameEvents);
@@ -183,7 +181,5 @@ console.log(`An event happened every ${90 / gameEvents.size} minutes `);
 
 for (const [min, event] of gameEvents) {
   const half = min <= 45 ? 'First' : 'Second';
-  console.log(`[${half} Half] ${min}: ${event}`);
+  console.log(`${half} half : ${min}: ${event}`);
 }
-
-// */
